@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @post.name %>
+</p>
+
+<p>
+  <b>Title:</b>
+  <%= @post.title %>
+</p>
+
+<p>
+  <b>tegs:</b>
+  <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %>
+</p>
+
+<p>
+  <b>Content:</b>
+  <%= @post.content %>
+</p>
+
+
+<h2>Comments</h2>
+<%= render @post.comments %>
+
+
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %>
