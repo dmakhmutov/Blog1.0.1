@@ -83,7 +83,8 @@ ActiveAdmin.setup do |config|
   # This setting changes the http method used when rendering the
   # link. For example :get, :delete, :put, etc..
   #
-  # Default:
+  # Default was get:
+  # using for log out in admin dabord
   config.logout_link_method = :delete
 
   # == Root
