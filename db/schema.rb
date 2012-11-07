@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121024205636) do
+ActiveRecord::Schema.define(:version => 20121107085652) do
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -47,5 +47,8 @@ ActiveRecord::Schema.define(:version => 20121024205636) do
   create_table "tags", :force => true do |t|
     t.string "name"
   end
+
+# Could not dump table "users" because of following StandardError
+#   Unknown type 'bool' for column 'admin'
 
 end
