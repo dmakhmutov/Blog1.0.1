@@ -1,4 +1,4 @@
-<p id="notice"><%= notice %></p>
+<!--<p id="notice"><%= notice %></p>-->
 
 <p>
   <b>Name:</b>
@@ -11,7 +11,7 @@
 </p>
 
 <p>
-  <b>tegs:</b>
+  <b>tags:</b>
   <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %>
 </p>
 
@@ -20,12 +20,9 @@
   <%= @post.content %>
 </p>
 
-
-<h2>Comments</h2>
+    <h2>Comments</h2>
 <%= render @post.comments %>
-
-
-<h2>Add a comment:</h2>
+    <h2>Add a comment:</h2>
 <%= render "comments/form" %>
 
 
