@@ -7,6 +7,7 @@ gem 'rails', '3.2.8'
 
 gem 'sqlite3'
 
+#log in, log out - security system
 gem 'devise'
 gem 'activeadmin'
 gem 'meta_search'
