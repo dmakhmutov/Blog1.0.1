@@ -9,6 +9,8 @@ gem 'sqlite3'
 
 #log in, log out - security system
 gem 'devise'
+
+#admin#dashbord
 gem 'activeadmin'
 gem 'meta_search'
 
@@ -21,7 +23,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-
+  gem 'twitter-bootstrap-rails'
   gem 'uglifier', '>= 1.0.3'
 end
 
