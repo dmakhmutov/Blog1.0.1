@@ -10,9 +10,9 @@ Blog101::Application.routes.draw do
 
   resources :posts  do
     resources :comments
+  end
 
-end
-
+  match "*wrong" => 'posts#index'
 
 
 

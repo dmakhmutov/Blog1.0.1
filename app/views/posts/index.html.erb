@@ -12,17 +12,17 @@
     <h3><%= link_to post.title, post %></h3>
       <%= post.name %>
       <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %> <br />
-      <%= link_to 'Edit', edit_post_path(post) %>
-      <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br />
-      <%= post.content %>
+      <!-- <%= link_to 'Edit', edit_post_path(post) %>
+           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br /> -->
+    <%= post.content %>
     <br />
     <br />
  <% end %>
+  <!--<div class ="btn">
+    <%= link_to 'New Post', new_post_path %>
+  </div>                                    -->
 </form>
 
 
-<div class ="btn">
-    <%= link_to 'New Post', new_post_path %>
-</div>
 
 
