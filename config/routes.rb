@@ -12,7 +12,7 @@ Blog101::Application.routes.draw do
     resources :comments
   end
 
-  match "*wrong" => 'posts#index'
+  match "*wrong" => 'home#404'
 
 
 
