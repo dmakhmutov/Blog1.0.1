@@ -23,7 +23,7 @@ production:
   encoding: unicode
   database: production
   pool: 5
-  host: 127.0.0.1
+  host: postgresql2.locum.ru
   port: 5433
-  username: vermuth
-  password: godofwar115161
+  username: vermuth_rubybl43
+  password: 8MbTDeVY
