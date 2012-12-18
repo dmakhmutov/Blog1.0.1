@@ -28,6 +28,7 @@ class PostsController < ApplicationController
   # GET /posts/new
   # GET /posts/new.json
   def new
+    authenticate_admin_user!
     @post = Post.new
 
     respond_to do |format|
