@@ -38,12 +38,14 @@ class PostsController < ApplicationController
 
   # GET /posts/1/edit
   def edit
+    authenticate_admin_user!
     @post = Post.find(params[:id])
   end
 
   # POST /posts
   # POST /posts.json
   def create
+    authenticate_admin_user!
     @post = Post.new(params[:post])
 
     respond_to do |format|
@@ -60,6 +62,7 @@ class PostsController < ApplicationController
   # PUT /posts/1
   # PUT /posts/1.json
   def update
+    authenticate_admin_user!
     @post = Post.find(params[:id])
 
     respond_to do |format|
@@ -70,7 +73,7 @@ class PostsController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
-    end
+    ]end
   end
 
   # DELETE /posts/1
