@@ -73,7 +73,7 @@ class PostsController < ApplicationController
         format.html { render action: "edit" }
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
-    ]end
+    end
   end
 
   # DELETE /posts/1
