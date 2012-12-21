@@ -13,7 +13,8 @@ load 'deploy/assets'
 # авторизацию на другие хосты.
 # Если вы не используете авторизацию SSH по ключам И ssh-agent,
 # закомментируйте эту опцию.
-#ssh_options[:forward_agent] = true
+ssh_options[:forward_agent] = true
+default_run_options[:pty] = true
 
 # Имя вашего проекта в панели управления.
 # Не меняйте это значение без необходимости, оно используется дальше.
@@ -47,16 +48,19 @@ set :bundle_cmd,      "rvm use #{rvm_ruby_string} do bundle"
 # по умолчанию - git, если используется иная система версий,
 # нужно изменить значение scm.
 set :scm,             :git
+#set :branch,          "master"
 
 # Предполагается, что вы размещаете репозиторий Git в вашем
 # домашнем каталоге в подкаталоге git/<имя проекта>.git.
 # Подробнее о создании репозитория читайте в нашем блоге
 # http://locum.ru/blog/hosting/git-on-locum
-set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
+#set :repository,      "ssh://#{user}@#{deploy_server}/home/#{user}/git/#{application}.git"
 
 ## Если ваш репозиторий в GitHub, используйте такую конфигурацию
-#set :repository,    "git@github.com:Vermuth/Blog1.0.1.git"
-
+set :repository,    "git@github.com:Vermuth/Blog1.0.1.git"
+# set  :repository,     "file:///home/vermuth/ruby_proj/Rails/Blog1.0.1"
+# set :local_repository, "localhost:/home/vermuth/ruby_proj/Rails/Blog1.0.1/.git"
+# set :deploy_via, :copy
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
 before 'deploy:finalize_update', 'set_current_release'

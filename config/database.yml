@@ -25,5 +25,5 @@ production:
   pool: 5
   host: postgresql2.locum.ru
   port: 5433
-  username: vermuth_rubybl43
-  password: 8MbTDeVY
+  username:
+  password:
