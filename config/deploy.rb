@@ -60,7 +60,7 @@ set :scm,             :git
 set :repository,    "git@github.com:Vermuth/Blog1.0.1.git"
 # set  :repository,     "file:///home/vermuth/ruby_proj/Rails/Blog1.0.1"
 # set :local_repository, "localhost:/home/vermuth/ruby_proj/Rails/Blog1.0.1/.git"
-# set :deploy_via, :copy
+set :deploy_via, :copy
 ## --- Ниже этого места ничего менять скорее всего не нужно ---
 
 before 'deploy:finalize_update', 'set_current_release'
