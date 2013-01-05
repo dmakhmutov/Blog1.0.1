@@ -1,28 +1,26 @@
 <!--<p id="notice"><%= notice %></p>-->
 
+<!--TITLE-->
+<h3><%= @post.title %></h3>
+
+<!--autor name-->
 <p>
-  <b>Name:</b>
   <%= @post.name %>
-</p>
-
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
+    <!--tags uses-->
   <b>tags:</b>
   <%= raw @post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %>
 </p>
 
+
+<!--content-->
 <p>
-  <b>Content:</b>
   <%= @post.content %>
 </p>
 
-    <h2>Comments</h2>
+<h5>Comments</h5>
 <%= render @post.comments %>
-    <h2>Add a comment:</h2>
+
+<h5>Add a comment:</h5>
 <%= render "comments/form" %>
 
 
