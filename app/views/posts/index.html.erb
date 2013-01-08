@@ -1,11 +1,10 @@
 <form class ="caption">
 <% @posts.reverse_each do |post| %>
-      </br>
       <div class="caption">
       <legend><%= link_to post.title, post %></legend>
       <strong><%= post.name %></strong>
       <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %> <br />
-      <%= post.content %>
+      <%= truncate post.content, length: 300 %>
       </div>
  <% end %>
 </form>
