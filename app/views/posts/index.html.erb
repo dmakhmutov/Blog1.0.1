@@ -1,21 +1,14 @@
-<h1>Posts</h1>
-
-<form class ="well">
+<form class ="caption">
 <% @posts.reverse_each do |post| %>
-    <h3><%= link_to post.title, post %></h3>
-      <%= post.name %>
+      </br>
+      <div class="caption">
+      <legend><%= link_to post.title, post %></legend>
+      <strong><%= post.name %></strong>
       <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %> <br />
-      <!-- <%= link_to 'Edit', edit_post_path(post) %>
-           <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %><br /> -->
-    <%= post.content %>
-    <br />
-    <br />
+      <%= post.content %>
+      </div>
  <% end %>
-  <!--<div class ="btn">-->
-    <!--<%= link_to 'New Post', new_post_path %>-->
-  <!--</div>                                    &ndash;&gt;-->
 </form>
-
 
 
 
