@@ -34,7 +34,7 @@
             <% if current_user.admin? %>
                 <%=  link_to "Админка", admin_root_path%>
             <% end %>
-            <%= link_to "Sign out", destroy_user_session_path, :method => :delete%>
+            <%= link_to "Выход", destroy_user_session_path, :method => :delete%>
           </ul>
               <% else %>
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
