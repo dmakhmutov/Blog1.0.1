@@ -4,7 +4,7 @@
       <legend><%= link_to post.title, post %></legend>
       <strong><%= post.name %></strong>
       <%= raw post.tag_list.map {|t| link_to t, tag_path(t)}.join(" ,") %> <br />
-      <%= truncate post.content, length: 300 %>
+      <%= sanitize (truncate post.content, length: 300) %>
       </div>
  <% end %>
 </form>
