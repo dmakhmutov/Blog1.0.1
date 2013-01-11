@@ -1,7 +1,7 @@
 <%= form_for(@post) do |f| %>
   <% if @post.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+      <h2><%= pluralize(@post.errors.count, "error") %> пост был сохранён:</h2>
 
       <ul>
       <% @post.errors.full_messages.each do |msg| %>
@@ -20,7 +20,7 @@
       <%= f.text_field :title %>
     </div>
     <div class="field">
-      <%= f.label :tag_list, "Tags (separated by commas)" %><br />
+      <%= f.label :tag_list, "Разделяй запятыми!" %><br />
       <%= f.text_field :tag_list %>
     </div>
   <div class="field">

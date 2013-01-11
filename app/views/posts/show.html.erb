@@ -1,4 +1,4 @@
-<!--<p id="notice"><%= notice %></p>-->
+<p id="notice"><%= notice %></p>
 
 <!--TITLE-->
 <legend><%= @post.title %></legend>
@@ -13,10 +13,10 @@
   <%= sanitize @post.content %>
 </p>
 
-<h5>Comments</h5>
+<h5>Комментарии</h5>
 <%= render @post.comments %>
 
-<h5>Add a comment:</h5>
+<h5>Добавить комментарий:</h5>
 <%= render "comments/form" %>
 
-<%= link_to 'Back', posts_path %>
+<%= link_to 'назад', posts_path %>
