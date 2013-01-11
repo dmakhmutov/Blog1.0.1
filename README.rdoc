@@ -1,3 +1,3 @@
 == Welcome
 This is my first Rails  project!
-If you some good ideas,about what s I am doing wrong. So, let me know.
+If you have some good ideas,about what s I am doing wrong. So, let me know.
