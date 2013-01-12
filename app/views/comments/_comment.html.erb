@@ -1,11 +1,12 @@
+<a class ="btn btn-komment">Скрыть комментарии</a>
 <ul class="thumbnail">
-        <b>Commenter:</b>
-        <%= comment.commenter %> <br />
-        <b>Comment:</b>
-        <%= comment.body %>
+  <b>Commenter:</b>
+  <%= comment.commenter %> <br />
+  <b>Comment:</b>
+  <%= comment.body %>
 </ul>
 <p>
-    <%= link_to 'Destroy Comment', [comment.post, comment],
+  <%= link_to 'Destroy Comment', [comment.post, comment],
               :confirm => 'Are you sure?',
               :method => :delete %>
 </p>
