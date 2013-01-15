@@ -1,5 +1,6 @@
+<% if notice %>
 <p id="notice"><%= notice %></p>
-
+<% end %>
 <!--TITLE-->
 <legend><%= @post.title %></legend>
 
@@ -13,9 +14,15 @@
   <%= sanitize @post.content %>
 </p>
 
-<h5>Комментарии</h5>
+<a class ="btn btn-komment">Комментарии</a>
 <%= render @post.comments %>
 
 <%= render "comments/form" %>
 
 <%= link_to 'назад', posts_path %>
+
+<!--<script>-->
+//    $(".btn-komment").click(function(){
+//        $('.thumbnail').toggle('slow');
+//    });
+<!--</script>-->
