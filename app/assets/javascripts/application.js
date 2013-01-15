@@ -15,3 +15,8 @@
 //= require twitter/bootstrap
 //= require_tree .
 
+$(document).ready(function(){
+    $('.btn').click(function(){
+      $('.thumbnail, .p').toggle('slow');
+    });
+});
